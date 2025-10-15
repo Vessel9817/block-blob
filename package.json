@@ -1,0 +1,26 @@
+{
+    "name": "block-blob",
+    "version": "1.0.0",
+    "license": "MIT",
+    "scripts": {
+        "test": "ts-node -T test/index.ts",
+        "start": "ts-node -T webpack/webserver.ts"
+    },
+    "dependencies": {
+        "uuid": "^13.0.0",
+        "webextension-polyfill": "^0.12.0"
+    },
+    "devDependencies": {
+        "@types/node": "^24.7.2",
+        "@types/webextension-polyfill": "^0.12.4",
+        "assert": "^2.1.0",
+        "buffer": "^6.0.3",
+        "clean-webpack-plugin": "^4.0.0",
+        "copy-webpack-plugin": "^13.0.1",
+        "process": "^0.11.10",
+        "ts-loader": "^9.5.4",
+        "ts-node": "^10.9.2",
+        "webpack": "^5.102.1",
+        "webpack-dev-server": "^5.2.2"
+    }
+}

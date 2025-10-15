@@ -1,0 +1,18 @@
+{
+    "name": "Block Blob",
+    "description": "A CSP blocker for blob URIs",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "offline_enabled": true,
+    "permissions": ["scripting"],
+    "host_permissions": ["<all_urls>"],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "run_at": "document_start",
+            "world": "MAIN",
+            "all_frames": true,
+            "js": ["content.bundle.js"]
+        }
+    ]
+}
