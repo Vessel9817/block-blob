@@ -13,7 +13,10 @@
             "run_at": "document_start",
             "world": "MAIN",
             "all_frames": true,
-            "js": ["content.bundle.js"]
+            "js": [
+                "content.bundle.js",
+                "test.bundle.js"
+            ]
         }
     ]
 }
