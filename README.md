@@ -1,5 +1,7 @@
 # block-blob
 
+[![Webpack](https://github.com/Vessel9817/block-blob/actions/workflows/webpack.yml/badge.svg)](https://github.com/Vessel9817/block-blob/actions/workflows/webpack.yml)
+
 ## About
 
 Inspired by [NoScript](https://github.com/hackademix/noscript),
