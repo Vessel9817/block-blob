@@ -7,7 +7,7 @@
     "scripts": {
         "test": "tsx test/index.ts",
         "start": "tsx webpack/webserver.ts",
-        "webpack": "webpack -c ./webpack/webpack.config.ts"
+        "webpack": "cross-env NODE_OPTIONS=\"--no-experimental-strip-types --import tsx\" webpack -c ./webpack/webpack.config.ts"
     },
     "repository": {
         "type": "git",
@@ -24,6 +24,7 @@
         "buffer": "^6.0.3",
         "clean-webpack-plugin": "^4.0.0",
         "copy-webpack-plugin": "^13.0.1",
+        "cross-env": "^10.1.0",
         "process": "^0.11.10",
         "ts-loader": "^9.5.4",
         "tsx": "^4.20.6",
