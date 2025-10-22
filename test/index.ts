@@ -1,8 +1,10 @@
-import fakeBlobUriTest from './fakeBlobUriTest';
-import fakeBlobTest from './fakeBlobTest';
+import test from './blobTest';
 
-// Something in tsconfig.json is preventing top-level await
-(async () => {
-    fakeBlobUriTest();
-    await fakeBlobTest();
-})();
+const data = {
+    test: 'success',
+    code: 200
+};
+const options = { type: 'application/json' };
+const serializedData = JSON.stringify(data, null, 4);
+
+test(serializedData, options);

@@ -3,8 +3,7 @@
 ## About
 
 Inspired by [NoScript](https://github.com/hackademix/noscript),
-this extension blocks the `blob:` protocol by overriding `URL.createObjectURL`
-to create fake `blob:` URIs that result in failed fetches.
+this extension blocks the `blob:` protocol across tabs.
 This extension is intended for developer use only.
 
 ## Builds
