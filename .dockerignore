@@ -1,0 +1,19 @@
+# gitignore
+**/*.docker*
+**/.git
+**/node_modules
+**/tmp
+**/temp
+**/dist
+**/.ts-node
+**/*.old
+
+# dockerignore
+**/Docker*
+**/docker-compose*
+**/.gitignore
+/.github
+/.nvmrc
+**/*.md
+!**/LICENSE.md
+/webpack/webserver.ts
