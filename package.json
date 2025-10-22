@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "type": "module",
     "license": "MIT",
+    "private": "true",
     "scripts": {
         "start": "tsx webpack/webserver.ts",
         "webpack": "webpack -c ./webpack/webpack.config.ts"
