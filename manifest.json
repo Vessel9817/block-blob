@@ -1,6 +1,6 @@
 {
     "name": "Block Blob",
-    "description": "A CSP blocker for blob URIs",
+    "description": "A blob URI blocker",
     "version": "1.0.0",
     "manifest_version": 3,
     "minimum_chrome_version": "96",
