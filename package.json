@@ -10,7 +10,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/Vessel9817/block-blob.git"
+        "url": "git+https://github.com/Vessel9817/block-blob.git"
     },
     "dependencies": {
         "uuid": "^13.0.0",
