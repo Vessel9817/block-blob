@@ -1,7 +1,15 @@
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
+import { createRequire } from 'node:module';
 import path from 'node:path';
-import webpack, { ProgressPlugin } from 'webpack';
+import { fileURLToPath } from 'node:url';
+import webpack from 'webpack';
+
+process.env.NODE_ENV = 'development';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const require = createRequire(__filename);
 
 const PROJECT_ROOT = path.join(__dirname, '..');
 const OUTPUT_DIR = "dist";
@@ -69,7 +77,7 @@ const config: webpack.Configuration = {
             verbose: false,
             protectWebpackAssets: false
         }),
-        new ProgressPlugin(),
+        new webpack.ProgressPlugin(),
 
         // assert depends on process
         // https://github.com/browserify/commonjs-assert/issues/55#issuecomment-996543717

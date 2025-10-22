@@ -28,7 +28,4 @@ const server = new WebpackDevServer(
 );
 
 // Running dev server
-// (Something in tsconfig.json is preventing top-level await)
-(async () => {
-    await server.start();
-})();
+await server.start();
