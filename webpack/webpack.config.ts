@@ -18,14 +18,9 @@ const config: webpack.Configuration = {
     mode: 'development',
     devtool: 'cheap-module-source-map',
     entry: {
-        // Content script
-        content: {
-            import: path.join(PROJECT_ROOT, 'src', 'content.ts')
-        },
-
-        // Used for debugging purposes 
-        test: {
-            import: path.join(PROJECT_ROOT, 'test', 'contentTest.ts')
+        // Background script
+        background: {
+            import: path.join(PROJECT_ROOT, 'src', 'background.ts')
         }
     },
     output: {
@@ -80,12 +75,6 @@ const config: webpack.Configuration = {
         }),
         new webpack.ProgressPlugin(),
 
-        // assert depends on process
-        // https://github.com/browserify/commonjs-assert/issues/55#issuecomment-996543717
-        new webpack.ProvidePlugin({
-            process: 'process/browser'
-        }),
-        
         // Copying files
         new CopyWebpackPlugin({
             patterns: ['manifest.json', 'LICENSE']

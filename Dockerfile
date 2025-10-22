@@ -5,7 +5,7 @@ FROM ${NODE_VERSION} AS webpack
 # Installing dependencies
 WORKDIR /home/node/src
 COPY [ "./package.json", "./package-lock.json*", "./npm-shrinkwrap.json*", "./" ]
-RUN npm i
+RUN npm ci
 
 # Copying source files
 # 1000:1000 corresponds to user "node"
