@@ -7,6 +7,10 @@
         "start": "tsx webpack/webserver.ts",
         "webpack": "webpack -c ./webpack/webpack.config.ts"
     },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Vessel9817/block-blob.git#experimental"
+    },
     "dependencies": {
         "uuid": "^13.0.0",
         "webextension-polyfill": "^0.12.0"
