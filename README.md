@@ -1,6 +1,6 @@
 # block-blob
 
-[![Webpack](https://github.com/Vessel9817/block-blob/actions/workflows/webpack.yml/badge.svg)](https://github.com/Vessel9817/block-blob/actions/workflows/webpack.yml)
+[![Webpack](https://github.com/Vessel9817/block-blob/actions/workflows/ci.yml/badge.svg)](https://github.com/Vessel9817/block-blob/actions/workflows/ci.yml)
 
 ## About
 
