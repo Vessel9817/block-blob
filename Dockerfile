@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=ubuntu:noble
+ARG BASE_IMAGE=ubuntu:noble@sha256:d1e2e92c075e5ca139d51a140fff46f84315c0fdce203eab2807c7e495eff4f9
 
 FROM ${BASE_IMAGE} AS base
 
@@ -29,8 +29,8 @@ RUN \
 # Installing NVM
 # https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-in-docker
 ENV NVM_DIR="/root/.nvm"
-ARG NVM_VERSION="v0.40.3"
-ARG NVM_HASH=sha256:2d8359a64a3cb07c02389ad88ceecd43f2fa469c06104f92f98df5b6f315275f
+ARG NVM_VERSION="v0.40.4"
+ARG NVM_HASH=sha256:4b7412c49960c7d31e8df72da90c1fb5b8cccb419ac99537b737028d497aba4f
 ADD --checksum="${NVM_HASH}" --chmod="+x" [ \
     "https://raw.githubusercontent.com/nvm-sh/nvm/${NVM_VERSION}/install.sh", \
     "/tmp/" \
