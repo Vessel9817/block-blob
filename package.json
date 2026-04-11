@@ -7,7 +7,8 @@
     "scripts": {
         "test": "tsx test/index.ts",
         "start": "tsx webpack/webserver.ts",
-        "webpack": "cross-env NODE_OPTIONS=\"--no-experimental-strip-types --import tsx\" webpack -c ./webpack/webpack.config.ts"
+        "webpack": "cross-env NODE_OPTIONS=\"--no-experimental-strip-types --import tsx\" webpack -c ./webpack/webpack.config.ts",
+        "tsc": "tsc --noEmit"
     },
     "repository": {
         "type": "git",
