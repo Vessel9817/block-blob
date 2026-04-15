@@ -1,12 +1,12 @@
 import path from 'node:path';
 import webpack from 'webpack';
 import WebpackDevServer from 'webpack-dev-server';
-import config from './webpack.config';
+import config from './webpack.config.ts';
 
 const OUTPUT_DIR = 'dist';
 const WEBPACK_PORT = '8000';
 
-const compiler = webpack(config)!;
+const compiler = webpack(config);
 
 // Enabling server-side (and disabling client-side) hot reloading
 const server = new WebpackDevServer(

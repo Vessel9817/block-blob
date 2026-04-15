@@ -29,6 +29,6 @@
         "skipLibCheck": true,
         "noErrorTruncation": true // See fully expanded types
     },
-    "include": ["src", "test"],
+    "include": ["src", "test", "webpack"],
     "exclude": ["dist", "node_modules"]
 }

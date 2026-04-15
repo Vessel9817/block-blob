@@ -1,4 +1,4 @@
-import { tryBlob } from './fakeBlobTest';
+import { tryBlob } from './fakeBlobTest.ts';
 
 const data = {
     blob: 'fetched',
