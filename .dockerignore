@@ -15,5 +15,6 @@
 /.github
 /.nvmrc
 **/*.md
-!**/LICENSE.md
+!**/LICEN[CS]E*
+!**/*.licen[cs]e
 /webpack/webserver.ts
