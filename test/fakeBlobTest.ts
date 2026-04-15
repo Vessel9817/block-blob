@@ -1,6 +1,6 @@
 import assert from 'assert';
 import { Buffer } from 'buffer';
-import { initFakeBlob } from '../src/fakeBlob.ts';
+import { initFakeBlob } from '../src/fakeBlob';
 
 export async function tryBlob(
     blobPart: string,

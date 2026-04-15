@@ -1,3 +1,3 @@
-import { initFakeBlob } from './fakeBlob.ts';
+import { initFakeBlob } from './fakeBlob';
 
 initFakeBlob();

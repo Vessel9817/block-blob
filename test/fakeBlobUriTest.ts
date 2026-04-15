@@ -1,6 +1,6 @@
 import assert from 'assert';
 import { validate } from 'uuid';
-import { fakeBlobURI } from '../src/fakeBlob.ts';
+import { fakeBlobURI } from '../src/fakeBlob';
 
 function testHTTP(): void {
     const uri = fakeBlobURI("https://developer.mozilla.org/en-US/docs/Web/API/URL/origin");

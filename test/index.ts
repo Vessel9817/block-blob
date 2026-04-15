@@ -1,5 +1,5 @@
-import fakeBlobUriTest from './fakeBlobUriTest.ts';
-import fakeBlobTest from './fakeBlobTest.ts';
+import fakeBlobUriTest from './fakeBlobUriTest';
+import fakeBlobTest from './fakeBlobTest';
 
 fakeBlobUriTest();
 await fakeBlobTest();

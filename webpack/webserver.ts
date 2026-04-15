@@ -1,7 +1,7 @@
 import path from 'node:path';
 import webpack from 'webpack';
 import WebpackDevServer from 'webpack-dev-server';
-import config from './webpack.config.ts';
+import config from './webpack.config';
 
 const OUTPUT_DIR = 'dist';
 const WEBPACK_PORT = '8000';
