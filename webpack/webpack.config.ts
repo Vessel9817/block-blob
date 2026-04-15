@@ -37,8 +37,8 @@ const config: webpack.Configuration = {
     },
     resolve: {
         extensions: [
+            '.mts', // CTS/MTS before TS
             '.ts', // TS must come before JS
-            '.cjs',
             '.mjs', // CJS/MJS before JS
             '.js'
         ]
@@ -47,7 +47,7 @@ const config: webpack.Configuration = {
         rules: [
             // TS/TSX (must come before JS/JSX)
             {
-                test: /\.(ts|tsx)$/,
+                test: /\.(mts|ts|tsx)$/,
                 exclude: /node_modules/,
                 use: [
                     {
@@ -61,8 +61,9 @@ const config: webpack.Configuration = {
 
             // JS/JSX
             {
-                test: /\.(cjs|mjs|js|jsx)$/,
+                test: /\.(mjs|js|jsx)$/,
                 exclude: /node_modules/,
+                type: 'javascript/esm',
                 use: [
                     {
                         loader: 'source-map-loader'
