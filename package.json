@@ -15,7 +15,7 @@
         "url": "git+https://github.com/Vessel9817/block-blob.git"
     },
     "dependencies": {
-        "uuid": "^13.0.0",
+        "uuid": "^14.0.0",
         "webextension-polyfill": "^0.12.0"
     },
     "devDependencies": {
