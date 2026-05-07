@@ -2,9 +2,9 @@ import { Protocol } from 'devtools-protocol';
 import Browser from 'webextension-polyfill';
 
 class BlobBlocker {
-    // TODO Update when experimental commands are moved
-    // from the experimental tip-of-tree branch to a stable branch
-    // https://chromedevtools.github.io/devtools-protocol/tot/
+    /**
+     * @see {@link https://chromedevtools.github.io/devtools-protocol/1-3/}
+     */
     private static readonly DEBUGGER_VERSION = '1.3';
     private static _singleton?: BlobBlocker;
 
@@ -69,7 +69,7 @@ class BlobBlocker {
             handleAuthRequests: false
         };
 
-        // @ts-expect-error commandParams is a subtype of Record<string, unknown>
+        // @ts-expect-error devtools-protocol types are more strict than @types/chrome
         await chrome.debugger.sendCommand(target, 'Fetch.enable', enableArgs);
     }
 
@@ -118,7 +118,7 @@ class BlobBlocker {
                 errorReason: 'Failed'
             };
 
-            // @ts-expect-error commandParams is a subtype of Record<string, unknown>
+            // @ts-expect-error devtools-protocol types are more strict than @types/chrome
             await chrome.debugger.sendCommand({ tabId }, 'Fetch.failRequest', failArgs);
             return
         }
@@ -128,7 +128,7 @@ class BlobBlocker {
             requestId: pauseParams.requestId
         };
 
-        // @ts-expect-error commandParams is a subtype of Record<string, unknown>
+        // @ts-expect-error devtools-protocol types are more strict than @types/chrome
         await chrome.debugger.sendCommand({ tabId }, 'Fetch.continueRequest', continueArgs);
     }
 
