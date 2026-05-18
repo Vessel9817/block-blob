@@ -14,7 +14,7 @@ This extension is intended for developer use only.
 ### Installing
 
 - Install `npm`
-- In the project root, run `npm i`
+- In the project root, run `npm ci`
 
 ### Running
 

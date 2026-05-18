@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
-        run: npm i
+        run: npm ci
       - name: Run tsc
         run: npm run tsc
   webpack:
@@ -35,7 +35,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
-        run: npm i
+        run: npm ci
       - name: Build
         run: npm run webpack
   docker:
@@ -65,6 +65,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
-        run: npm i
+        run: npm ci
       - name: Build
         run: npm test
