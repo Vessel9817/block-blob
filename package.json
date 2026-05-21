@@ -25,7 +25,7 @@
         "clean-webpack-plugin": "^4.0.0",
         "copy-webpack-plugin": "^14.0.0",
         "cross-env": "^10.1.0",
-        "devtools-protocol": "^0.0.1629771",
+        "devtools-protocol": "^0.0.1632630",
         "ts-loader": "^9.6.0",
         "tsx": "^4.22.4",
         "typescript": "^6.0.3",
