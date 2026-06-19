@@ -11,8 +11,17 @@ function testHTTP(): void {
     );
 }
 
-function testProtocol(): void {
+function testWinProtocol(): void {
     const uri = fakeBlobURI("file:///C:/Users/Downloads/secret_evidence.mp4");
+
+    assert.ok(
+        uri.startsWith('blob:null/'),
+        `Fake blob URI doesn't correctly identify protocol origin, got: ${uri}`
+    );
+}
+
+function testNixProtocol(): void {
+    const uri = fakeBlobURI("file:///tmp/secret_evidence.mp4");
 
     assert.ok(
         uri.startsWith('blob:null/'),
@@ -32,6 +41,7 @@ function testUUID(): void {
 
 export default function test(): void {
     testHTTP();
-    testProtocol();
+    testWinProtocol();
+    testNixProtocol();
     testUUID();
 }
