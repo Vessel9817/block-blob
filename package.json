@@ -33,10 +33,5 @@
         "webpack": "^5.108.4",
         "webpack-cli": "^7.2.1",
         "webpack-dev-server": "^6.0.0"
-    },
-    "overrides": {
-        "webpack-dev-server": {
-            "http-proxy-middleware": "^3.0.6"
-        }
     }
 }
