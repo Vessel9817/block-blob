@@ -1,4 +1,3 @@
-import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import { createRequire } from 'node:module';
 import path from 'node:path';
@@ -73,11 +72,6 @@ const config: webpack.Configuration = {
         ]
     },
     plugins: [
-        // Cleaning the build directory
-        new CleanWebpackPlugin({
-            verbose: false,
-            protectWebpackAssets: false
-        }),
         new webpack.ProgressPlugin(),
 
         // assert depends on process
