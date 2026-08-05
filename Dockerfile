@@ -1,15 +1,23 @@
 ARG NODE_VERSION=node:lts-alpine3.22
 
-FROM ${NODE_VERSION} AS webpack
+# Builds the extension
+FROM ${NODE_VERSION}
 
 # Installing dependencies
-WORKDIR /home/node/src
-COPY [ "./package.json", "./package-lock.json*", "./npm-shrinkwrap.json*", "./" ]
-RUN npm i
+WORKDIR /project/
+COPY [ "./package.json", "./package-lock.json", "./npm-shrinkwrap.json", "./" ]
+RUN npm ci
 
 # Copying source files
 # 1000:1000 corresponds to user "node"
 COPY --link --chown="1000:1000" [ "./", "./" ]
 
-# Running CI
-CMD [ "npm", "run", "webpack" ]
+# Building extension
+USER node
+RUN \
+    npm run webpack \
+    && mv '/project/dist/' '/dist/' \
+    && rm -rf '/project/' \
+    && mv '/dist/' '/project/'
+
+CMD [ "/project/content.bundle.js" ]
