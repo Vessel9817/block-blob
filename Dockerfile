@@ -13,11 +13,12 @@ RUN npm ci
 COPY --link --chown="1000:1000" [ "./", "./" ]
 
 # Building extension
-USER node
 RUN \
     npm run webpack \
     && mv '/project/dist/' '/dist/' \
+    && cd .. \
     && rm -rf '/project/' \
     && mv '/dist/' '/project/'
 
+USER node
 CMD [ "/project/content.bundle.js" ]
