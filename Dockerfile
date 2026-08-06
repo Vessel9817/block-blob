@@ -14,7 +14,7 @@ COPY --link --chown="1000:1000" [ "./", "./" ]
 
 # Building extension
 RUN \
-    npm run webpack \
+    npm run build \
     && mv '/project/dist/' '/dist/' \
     && cd .. \
     && rm -rf '/project/' \
