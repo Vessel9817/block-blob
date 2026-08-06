@@ -5,7 +5,7 @@ FROM ${NODE_VERSION}
 
 # Installing dependencies
 WORKDIR /project/
-COPY [ "./package.json", "./package-lock.json", "./npm-shrinkwrap.json", "./" ]
+COPY [ "./package.json", "./package-lock.json", "./" ]
 RUN npm ci
 
 # Copying source files
