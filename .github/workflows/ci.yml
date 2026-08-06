@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --no-fund
       - name: Run tsc
         run: npm run tsc
   # Checks for dependency conflicts that `npm ci` would miss
@@ -54,7 +54,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --no-fund
       - name: Build
         run: npm run webpack
   # Builds the extension via Docker
@@ -86,6 +86,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --no-fund
       - name: Build
         run: npm test
