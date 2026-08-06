@@ -32,7 +32,8 @@ const config: webpack.Configuration = {
         filename: '[name].bundle.js',
         path: path.join(PROJECT_ROOT, OUTPUT_DIR),
         clean: true,
-        publicPath: '/'
+        publicPath: '/',
+        iife: true
     },
     resolve: {
         extensions: [
