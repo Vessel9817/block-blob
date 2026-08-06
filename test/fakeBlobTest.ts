@@ -35,11 +35,6 @@ function fakeBlobTest(
     blobPart: string,
     options?: BlobPropertyBag
 ): void {
-    const href = 'https://developer.mozilla.org';
-    const blobPartStr = JSON.stringify(blobPart);
-    const optionsStr = JSON.stringify(options);
-    const hrefStr = JSON.stringify(href);
-
     function containedFakeBlobTest(
         blobPart: string,
         options: BlobPropertyBag | undefined,
@@ -57,7 +52,12 @@ function fakeBlobTest(
             });
     }
 
-    eval(`containedFakeBlobTest(${blobPartStr}, ${optionsStr}, ${hrefStr});`)
+    const href = 'https://developer.mozilla.org';
+    const blobPartStr = JSON.stringify(blobPart);
+    const optionsStr = JSON.stringify(options);
+    const hrefStr = JSON.stringify(href);
+
+    eval(`${containedFakeBlobTest.name}(${blobPartStr}, ${optionsStr}, ${hrefStr});`); // NOSONAR typescript:S1523 All dynamic inputs have been sanitized
 }
 
 export default async function test(): Promise<void> {
