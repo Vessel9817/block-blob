@@ -88,7 +88,8 @@ const config: webpack.Configuration = {
     ],
     infrastructureLogging: {
         level: 'info'
-    }
+    },
+    stats: 'errors-warnings'
 };
 
 export default config;
