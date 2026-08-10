@@ -8,7 +8,7 @@
         "test": "tsx test/index.ts",
         "start": "tsx webpack/webserver.ts",
         "build": "tsx webpack/index.ts",
-        "tsc": "tsc --noEmit"
+        "tsc": "tsc"
     },
     "repository": {
         "type": "git",
