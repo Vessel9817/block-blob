@@ -20,7 +20,7 @@
     },
     "devDependencies": {
         "@types/node": "^26.4.0",
-        "@types/webextension-polyfill": "^0.12.5",
+        "@types/webextension-polyfill": "^0.12.6",
         "@typescript/native": "npm:typescript@^7.0.2",
         "assert": "^2.1.0",
         "buffer": "^6.0.3",
