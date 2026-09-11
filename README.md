@@ -1,6 +1,6 @@
 # block-blob
 
-[![MIT License][license-badge]](./LICENSE)
+[![MIT license][license-badge]](./LICENSE)
 [![CI][ci-badge]][ci-workflow]
 
 ## About
