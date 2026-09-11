@@ -21,6 +21,6 @@ This extension is intended for developer use only.
 
 - In the project root, run `npm start`
 
-[license-badge]: https://raw.githubusercontent.com/Vessel9817/source-inspector/refs/heads/main/license.svg
+[license-badge]: https://raw.githubusercontent.com/Vessel9817/block-blob/refs/heads/main/license.svg
 [ci-badge]: https://github.com/Vessel9817/block-blob/actions/workflows/ci.yml/badge.svg
 [ci-workflow]: https://github.com/Vessel9817/block-blob/actions/workflows/ci.yml
