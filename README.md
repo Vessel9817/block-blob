@@ -1,6 +1,7 @@
 # block-blob
 
-[![CI](https://github.com/Vessel9817/block-blob/actions/workflows/ci.yml/badge.svg)](https://github.com/Vessel9817/block-blob/actions/workflows/ci.yml)
+[MIT License][license-badge]
+[![CI][ci-badge]][ci-workflow]
 
 ## About
 
@@ -19,3 +20,7 @@ This extension is intended for developer use only.
 ### Running
 
 - In the project root, run `npm start`
+
+[license-badge]: https://raw.githubusercontent.com/Vessel9817/source-inspector/refs/heads/main/license.svg
+[ci-badge]: https://github.com/Vessel9817/block-blob/actions/workflows/ci.yml/badge.svg
+[ci-workflow]: https://github.com/Vessel9817/block-blob/actions/workflows/ci.yml
