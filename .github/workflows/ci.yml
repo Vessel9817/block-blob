@@ -39,7 +39,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Check dependency tree
-        run: npm i --package-lock-only --dry-run
+        run: >-
+          npm i --package-lock-only --dry-run
+          && npm ci --dry-run --ignore-scripts
   # Builds the extension via Node.js
   webpack:
     permissions:
